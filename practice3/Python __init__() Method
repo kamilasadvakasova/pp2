@@ -1,0 +1,58 @@
+class UserProfile:
+    def __init__(self, username, years):
+        self.username = username
+        self.years = years
+
+u1 = UserProfile("Alex", 21)
+
+print(u1.username)
+print(u1.years)
+
+
+class EmptyProfile:
+    pass
+
+u2 = EmptyProfile()
+u2.username = "Bob"
+u2.years = 25
+
+print(u2.username)
+print(u2.years)
+
+
+class Account:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+acc = Account("Charlie", 28)
+
+print(acc.name)
+print(acc.age)
+
+
+class Member:
+    def __init__(self, nickname, age=18):
+        self.nickname = nickname
+        self.age = age
+
+m1 = Member("Diana")
+m2 = Member("Ethan", 30)
+
+print(m1.nickname, m1.age)
+print(m2.nickname, m2.age)
+
+
+class Citizen:
+    def __init__(self, name, age, city, country):
+        self.name = name
+        self.age = age
+        self.city = city
+        self.country = country
+
+c1 = Citizen("Frank", 35, "Berlin", "Germany")
+
+print(c1.name)
+print(c1.age)
+print(c1.city)
+print(c1.country)
