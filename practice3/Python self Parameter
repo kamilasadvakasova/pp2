@@ -1,0 +1,49 @@
+class User:
+    def __init__(self, username, years):
+        self.username = username
+        self.years = years
+
+    def say_hello(self):
+        print("Hello, my name is " + self.username)
+
+u1 = User("Alex", 25)
+u1.say_hello()
+
+
+class Profile:
+    def __init__(self, name):
+        self.name = name
+
+    def show_name(self):
+        print(self.name)
+
+p1 = Profile("Bob")
+p2 = Profile("Charlie")
+
+p1.show_name()
+p2.show_name()
+
+
+class Member:
+    def __init__(obj, nickname, age):
+        obj.nickname = nickname
+        obj.age = age
+
+    def greet(x):
+        print("Hello, my name is " + x.nickname)
+
+m1 = Member("Diana", 30)
+m1.greet()
+
+
+class Vehicle:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def show_info(self):
+        print(f"{self.year} {self.brand} {self.model}")
+
+v1 = Vehicle("Honda", "Civic", 2022)
+v1.show_info()
