@@ -1,0 +1,26 @@
+class Sample:
+    value = 10
+
+
+
+obj = Sample()
+print(obj.value)
+
+
+
+del obj
+
+
+
+a = Sample()
+b = Sample()
+c = Sample()
+
+print(a.value)
+print(b.value)
+print(c.value)
+
+
+
+class User:
+    pass
