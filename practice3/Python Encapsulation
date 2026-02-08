@@ -1,0 +1,103 @@
+class User:
+    def __init__(self, username, years):
+        self.username = username
+        self.__years = years
+
+u1 = User("Alex", 25)
+print(u1.username)
+
+
+class Profile:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age
+
+    def get_age(self):
+        return self.__age
+
+p1 = Profile("Bob", 25)
+print(p1.get_age())
+
+
+class Account:
+    def __init__(self, owner, age):
+        self.owner = owner
+        self.__age = age
+
+    def get_age(self):
+        return self.__age
+
+    def set_age(self, value):
+        if value > 0:
+            self.__age = value
+        else:
+            print("Age must be positive")
+
+a1 = Account("Charlie", 25)
+print(a1.get_age())
+a1.set_age(26)
+print(a1.get_age())
+
+
+class Learner:
+    def __init__(self, name):
+        self.name = name
+        self.__score = 0
+
+    def set_score(self, score):
+        if 0 <= score <= 100:
+            self.__score = score
+        else:
+            print("Score must be between 0 and 100")
+
+    def get_score(self):
+        return self.__score
+
+    def status(self):
+        if self.__score >= 60:
+            return "Passed"
+        else:
+            return "Failed"
+
+l1 = Learner("Diana")
+l1.set_score(85)
+print(l1.get_score())
+print(l1.status())
+
+
+class Worker:
+    def __init__(self, name, income):
+        self.name = name
+        self._income = income
+
+w1 = Worker("Ethan", 50000)
+print(w1.name)
+print(w1._income)
+
+
+class MathEngine:
+    def __init__(self):
+        self.total = 0
+
+    def __check(self, value):
+        return isinstance(value, (int, float))
+
+    def add(self, value):
+        if self.__check(value):
+            self.total += value
+        else:
+            print("Invalid value")
+
+engine = MathEngine()
+engine.add(10)
+engine.add(5)
+print(engine.total)
+
+
+class Citizen:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age
+
+c1 = Citizen("Frank", 30)
+print(c1._Citizen__age)
