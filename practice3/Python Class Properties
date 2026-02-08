@@ -1,0 +1,54 @@
+class User:
+    def __init__(self, username, years):
+        self.username = username
+        self.years = years
+
+u1 = User("Alex", 36)
+
+print(u1.username)
+print(u1.years)
+
+
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+v1 = Vehicle("Honda", "Civic")
+
+print(v1.brand)
+print(v1.model)
+
+
+class Member:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+m1 = Member("Bob", 25)
+print(m1.age)
+
+m1.age = 26
+print(m1.age)
+
+
+class Profile:
+    def __init__(self, nickname, score):
+        self.nickname = nickname
+        self.score = score
+
+p1 = Profile("Charlie", 30)
+
+del p1.score
+
+print(p1.nickname)
+
+
+class Person:
+    category = "Human"
+
+    def __init__(self, name):
+        self.name = name
+
+p1 = Person("Diana")
+p
