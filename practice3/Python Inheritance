@@ -1,0 +1,67 @@
+class Human:
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def show_name(self):
+        print(self.first, self.last)
+
+
+h1 = Human("John", "Smith")
+h1.show_name()
+
+
+class Learner(Human):
+    pass
+
+
+l1 = Learner("Anna", "Brown")
+l1.show_name()
+
+
+class Trainee(Human):
+    def __init__(self, first, last):
+        Human.__init__(self, first, last)
+
+
+t1 = Trainee("Mark", "Taylor")
+t1.show_name()
+
+
+class Pupil(Human):
+    def __init__(self, first, last):
+        super().__init__(first, last)
+
+
+p1 = Pupil("Lucy", "White")
+p1.show_name()
+
+
+class Graduate(Human):
+    def __init__(self, first, last, year):
+        super().__init__(first, last)
+        self.finish_year = year
+
+
+g1 = Graduate("David", "Green", 2022)
+g1.show_name()
+print(g1.finish_year)
+
+
+class StudentMember(Human):
+    def __init__(self, first, last, year):
+        super().__init__(first, last)
+        self.finish_year = year
+
+    def welcome_message(self):
+        print(
+            "Welcome",
+            self.first,
+            self.last,
+            "to the class of",
+            self.finish_year
+        )
+
+
+s1 = StudentMember("Emma", "Wilson", 2024)
+s1.welcome_message()
