@@ -1,0 +1,42 @@
+def go_down(x):
+    if x == 0:
+        print("Finish!")
+    else:
+        print("Step:", x)
+        go_down(x - 1)
+
+go_down(5)
+
+
+
+def calc_product(x):
+    # Base case
+    if x <= 1:
+        return 1
+    # Recursive case
+    return x * calc_product(x - 1)
+
+print(calc_product(5))
+
+
+
+def fib_number(k):
+    # Base case
+    if k <= 1:
+        return k
+    # Recursive case
+    return fib_number(k - 1) + fib_number(k - 2)
+
+print(fib_number(7))
+
+
+
+def add_elements(arr):
+    # Base case
+    if not arr:
+        return 0
+    # Recursive case
+    return arr[0] + add_elements(arr[1:])
+
+values = [1, 2, 3, 4, 5]
+print(add_elements(values))
