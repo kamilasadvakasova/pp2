@@ -1,0 +1,98 @@
+class Container:
+    def __init__(self):
+        self.title = "Outer Class"
+
+    class Element:
+        def __init__(self):
+            self.title = "Inner Class"
+
+        def show(self):
+            print("This is the inner class")
+
+
+box = Container()
+print(box.title)
+
+
+class Wrapper:
+    def __init__(self):
+        self.label = "Outer"
+
+    class Item:
+        def __init__(self):
+            self.label = "Inner"
+
+        def show(self):
+            print("Hello from inner class")
+
+
+wrap = Wrapper()
+item = wrap.Item()
+item.show()
+
+
+class Holder:
+    def __init__(self):
+        self.owner = "Alex"
+
+    class Detail:
+        def __init__(self, outer):
+            self.outer = outer
+
+        def show(self):
+            print(f"Outer class name: {self.outer.owner}")
+
+
+h = Holder()
+d = h.Detail(h)
+d.show()
+
+
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+        self.unit = self.Unit()
+
+    class Unit:
+        def __init__(self):
+            self.state = "Off"
+
+        def start(self):
+            self.state = "Running"
+            print("Engine started")
+
+        def stop(self):
+            self.state = "Off"
+            print("Engine stopped")
+
+    def move(self):
+        if self.unit.state == "Running":
+            print(f"Driving the {self.brand} {self.model}")
+        else:
+            print("Start the engine first!")
+
+
+v = Vehicle("Honda", "Civic")
+v.move()
+v.unit.start()
+v.move()
+
+
+class System:
+    def __init__(self):
+        self.processor = self.Processor()
+        self.memory = self.Memory()
+
+    class Processor:
+        def execute(self):
+            print("Processing data...")
+
+    class Memory:
+        def save(self):
+            print("Storing data...")
+
+
+sys = System()
+sys.processor.execute()
+sys.memory.save()
