@@ -1,0 +1,55 @@
+def number_stream():
+    yield 10
+    yield 20
+    yield 30
+
+for item in number_stream():
+    print(item)
+
+
+
+def generate_numbers(limit):
+    current = 1
+    while current <= limit:
+        yield current
+        current += 1
+
+for value in generate_numbers(5):
+    print(value)
+
+
+
+def stream_numbers(limit):
+    for index in range(limit):
+        yield index
+
+# Это не создаёт миллион чисел в памяти
+numbers = stream_numbers(1_000_000)
+
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+
+
+
+def name_provider():
+    yield "Alice"
+    yield "Bob"
+    yield "Charlie"
+
+iterator = name_provider()
+
+print(next(iterator))
+print(next(iterator))
+print(next(iterator))
+
+
+
+# List comprehension — сразу создаёт список
+squares_list = [num * num for num in range(5)]
+print(squares_list)
+
+# Generator expression — создаёт генератор
+squares_gen = (num * num for num in range(5))
+print(squares_gen)
+print(list(squares_gen))
