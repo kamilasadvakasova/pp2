@@ -1,0 +1,47 @@
+class User:
+    def __init__(self, username):
+        self.username = username
+
+    def say_hi(self):
+        print("Hello, my name is " + self.username)
+
+u1 = User("Alex")
+u1.say_hi()
+
+
+class MathTool:
+    def add_numbers(self, x, y):
+        return x + y
+
+    def multiply_numbers(self, x, y):
+        return x * y
+
+tool = MathTool()
+print(tool.add_numbers(5, 3))
+print(tool.multiply_numbers(4, 7))
+
+
+class Profile:
+    def __init__(self, name, years):
+        self.name = name
+        self.years = years
+
+    def info(self):
+        return f"{self.name} is {self.years} years old"
+
+p1 = Profile("Bob", 28)
+print(p1.info())
+
+
+class Member:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def birthday(self):
+        self.age += 1
+        print(f"Happy birthday! You are now {self.age}")
+
+m1 = Member("Charlie", 25)
+m1.birthday()
+m1.birthday()
