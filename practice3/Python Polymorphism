@@ -1,0 +1,82 @@
+text = "Hello World!"
+print(len(text))
+
+
+items = ("pen", "book", "lamp")
+print(len(items))
+
+
+data = {
+    "name": "Alice",
+    "age": 30,
+    "city": "Paris"
+}
+print(len(data))
+
+
+class Auto:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def action(self):
+        print("Drive!")
+
+
+class Ship:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def action(self):
+        print("Sail!")
+
+
+class Aircraft:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def action(self):
+        print("Fly!")
+
+
+a1 = Auto("BMW", "X5")
+s1 = Ship("Yamaha", "WaveRunner")
+f1 = Aircraft("Airbus", "A320")
+
+for obj in (a1, s1, f1):
+    obj.action()
+
+
+class Transport:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Move!")
+
+
+class CarTransport(Transport):
+    pass
+
+
+class BoatTransport(Transport):
+    def move(self):
+        print("Sail!")
+
+
+class PlaneTransport(Transport):
+    def move(self):
+        print("Fly!")
+
+
+c1 = CarTransport("Audi", "A6")
+b1 = BoatTransport("Bayliner", "VR5")
+p1 = PlaneTransport("Boeing", "737")
+
+for obj in (c1, b1, p1):
+    print(obj.brand)
+    print(obj.model)
+    obj.move()
